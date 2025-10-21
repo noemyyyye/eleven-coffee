@@ -1,1 +1,366 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+  width: 100%;
+  background-color: #E3D1BB;
+}
+
+header .menu .logo {
+  padding: 15px 0 15px 40px;
+}
+
+header .menu .logo img {
+  width: 150px;
+}
+
+header .menu .navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 80px;
+  list-style: none;
+  padding-right: 40px;
+}
+
+header .menu .navigation a {
+  text-decoration: none;
+  list-style: none;
+  font-size: 16px;
+  color: #41291F;
+  font-family: "Epilogue", sans-serif;
+  display: inline-block;
+  -webkit-transition: color 0.25s ease, -webkit-transform 0.25s ease;
+  transition: color 0.25s ease, -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease, color 0.25s ease;
+  transition: transform 0.25s ease, color 0.25s ease, -webkit-transform 0.25s ease;
+}
+
+header .menu .navigation a.contact {
+  background-color: #41291F;
+  color: #E3D1BB;
+  text-decoration: none;
+  font-family: "Epilogue", sans-serif;
+  font-size: 16px;
+  border-radius: 50px;
+  padding: 15px 20px;
+  display: inline-block;
+  -webkit-transition: color 0.25s ease, background-color 0.25s ease, -webkit-transform 0.25s ease;
+  transition: color 0.25s ease, background-color 0.25s ease, -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, -webkit-transform 0.25s ease;
+}
+
+header .menu .navigation a:hover {
+  -webkit-transform: scale(1.12);
+          transform: scale(1.12);
+  color: #B08E72;
+}
+
+header .banner {
+  background: url("./bannerimg.png") no-repeat center center;
+  background-size: cover;
+  height: 580px;
+}
+
+header .banner h1 {
+  font-family: "Figtree", sans-serif;
+  color: #E3D1BB;
+  font-size: 50px;
+  padding-bottom: 10px;
+}
+
+header .banner p {
+  font-family: "Epilogue", sans-serif;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+header .banner a {
+  background-color: #B08E72;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Epilogue", sans-serif;
+  font-size: 18px;
+  border-radius: 50px;
+  padding: 15px 20px;
+  display: inline-block;
+  -webkit-transition: color 0.25s ease, background-color 0.25s ease, -webkit-transform 0.25s ease;
+  transition: color 0.25s ease, background-color 0.25s ease, -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, -webkit-transform 0.25s ease;
+}
+
+header .text-banner {
+  width: 40%;
+  gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 150px;
+  padding-top: 150px;
+}
+
+header .text-banner .Discovery {
+  background-color: #B08E72;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Epilogue", sans-serif;
+  font-size: 18px;
+  border-radius: 50px;
+  padding: 15px 20px;
+  display: inline-block;
+  -webkit-transition: color 0.25s ease, background-color 0.25s ease, -webkit-transform 0.25s ease;
+  transition: color 0.25s ease, background-color 0.25s ease, -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, -webkit-transform 0.25s ease;
+}
+
+header .text-banner .Discovery:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+header .text-banner .Discovery:hover {
+  background-color: #41291F;
+}
+
+header .bandeau-defilant {
+  width: 100%;
+  overflow: hidden;
+  background-color: #41291F;
+  color: #E3D1BB;
+  padding: 15px 0;
+  font-weight: 500;
+  font-family: "Epilogue", sans-serif;
+  position: relative;
+  white-space: nowrap;
+}
+
+header .bandeau-defilant .defilement-contenu {
+  display: inline-block;
+  white-space: nowrap;
+  -webkit-animation: defile 20s linear infinite;
+          animation: defile 20s linear infinite;
+}
+
+header .bandeau-defilant .defilement-contenu span {
+  display: inline-block;
+  margin-right: 2rem;
+  font-size: 1.2rem;
+}
+
+@-webkit-keyframes defile {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@keyframes defile {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+main .notre-histoire {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .history-content {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #F2ECE0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+main .history-content h2 {
+  font-family: "Figtree", sans-serif;
+  font-size: 35px;
+  color: #41291F;
+  margin-bottom: 15px;
+}
+
+main .history-content p {
+  font-family: "Epilogue", sans-serif;
+  font-size: 16px;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+main .history-content a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #41291F;
+  border-radius: 50px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Epilogue", sans-serif;
+  font-size: 16px;
+}
+
+main .history-img {
+  width: 50%;
+  margin-bottom: -5px;
+}
+
+main .history-img img {
+  width: 100%;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .best-section {
+  background: #41291F;
+  padding: 50px 0;
+}
+
+main .best-title {
+  position: relative;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  font-family: "Figtree", sans-serif;
+  color: #F2ECE0;
+  padding-top: 40px;
+}
+
+main .best-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 90px;
+  height: 5px;
+  background: #B08E72;
+  border-radius: 10px;
+  -webkit-transform: translateX(calc(-50% - 50px));
+          transform: translateX(calc(-50% - 50px));
+  -webkit-animation: underlineSlide 2s ease-in-out infinite alternate;
+          animation: underlineSlide 2s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@-webkit-keyframes underlineSlide {
+  from {
+    -webkit-transform: translateX(calc(-50% - 50px));
+            transform: translateX(calc(-50% - 50px));
+  }
+  to {
+    -webkit-transform: translateX(calc(-50% + 50px));
+            transform: translateX(calc(-50% + 50px));
+  }
+}
+
+@keyframes underlineSlide {
+  from {
+    -webkit-transform: translateX(calc(-50% - 50px));
+            transform: translateX(calc(-50% - 50px));
+  }
+  to {
+    -webkit-transform: translateX(calc(-50% + 50px));
+            transform: translateX(calc(-50% + 50px));
+  }
+}
+
+main .slider {
+  overflow: hidden;
+  width: 100%;
+  background-color: #41291F;
+  padding-top: 30px;
+}
+
+main .slider-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  -webkit-animation: defile 20s linear infinite;
+          animation: defile 20s linear infinite;
+}
+
+main .slide-item {
+  text-align: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+main .slide-item img {
+  width: 250px;
+  height: 400px;
+  border-radius: 150px;
+}
+
+main .slide-item p {
+  margin-top: 8px;
+  font-weight: 500;
+  font-family: "Epilogue", sans-serif;
+  color: #F2ECE0;
+}
+
+@keyframes defile {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+/*# sourceMappingURL=style.css.map */
