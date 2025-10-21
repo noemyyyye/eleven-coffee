@@ -1,0 +1,269 @@
+// Couleurs
+$brun:       #41291F;
+$creme:      #E3D1BB;
+$beige:      #B08E72;
+$blanc:      #ffffff;
+ 
+// Polices
+$titre:      "Figtree", sans-serif;
+$texte:      "Epilogue", sans-serif;
+ 
+$rond:       50px;
+$vite:       .25s;
+$ease:       ease;
+ 
+// Autres
+$gap-large:  80px;
+$pad-large:  40px;
+ 
+ 
+ 
+// Mixins
+ 
+@mixin flex($justify: space-between, $align: center, $gap: 0) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+ 
+@mixin btn($bg, $fg, $py: 15px, $px: 20px, $fs: 18px, $radius: $rond) {
+  background-color: $bg;
+  color: $fg;
+  text-decoration: none;
+  font-family: $texte;
+  font-size: $fs;
+  border-radius: $radius;
+  padding: $py $px;
+  display: inline-block;
+  transition: transform $vite $ease, color $vite $ease, background-color $vite $ease;
+}
+ 
+@mixin zoom($scale: 1.05) {
+  &:hover { transform: scale($scale); }
+}
+ 
+@mixin lien($color: $brun, $fs: 16px) {
+  text-decoration: none;
+  list-style: none;
+  font-size: $fs;
+  color: $color;
+  font-family: $texte;
+  display: inline-block;
+  transition: transform $vite $ease, color $vite $ease;
+}
+ 
+@mixin defile($time: 20s) {
+  display: inline-block;
+  white-space: nowrap;
+  animation: defile $time linear infinite;
+}
+ 
+ 
+* { margin: 0; padding: 0; }
+ 
+
+header {
+ 
+ 
+  .menu {
+    @include flex(space-between, center);
+    width: 100%;
+    background-color: $creme;
+ 
+    .logo {
+      padding: 15px 0 15px $pad-large;
+ 
+      img { width: 150px; }
+    }
+ 
+    .navigation {
+      ul {
+        @include flex(flex-start, center, $gap-large);
+        list-style: none;
+        padding-right: $pad-large;
+      }
+ 
+      a {
+        @include lien();
+  
+        &.contact {
+          @include btn($brun, $creme, 10px, 20px, 16px);
+        }
+ 
+        &:hover {
+          transform: scale(1.12);
+          color: $beige;
+        }
+      }
+    }
+  }
+ 
+  .banner {
+    background: url('./img/baniere.png') no-repeat center center;
+    background-size: cover;
+    height: 580px;
+ 
+    h1 {
+      font-family: $titre;
+      color: $creme;
+      font-size: 50px;
+      padding-bottom: 10px;
+    }
+ 
+    p {
+      font-family: $texte;
+      color: $blanc;
+      font-size: 18px;
+    }
+ 
+    a {
+      @include btn($beige, $blanc);
+    }
+  }
+ 
+  .text-banner {
+    width: 40%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 150px;
+    padding-top: 100px;
+ 
+    .Discovery {
+      @include btn($beige, $blanc);
+      @include zoom(1.05);
+ 
+      &:hover { background-color: $brun; }
+    }
+  }
+ 
+  .bandeau-defilant {
+    width: 100%;
+    overflow: hidden;
+    background-color: $brun;
+    color: $creme;
+    padding: 15px 0;
+    font-weight: 500;
+    font-family: $texte;
+    position: relative;
+    white-space: nowrap;
+ 
+    .defilement-contenu {
+      @include defile(20s);
+ 
+      span {
+        display: inline-block;
+        margin-right: 2rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+ 
+@keyframes defile {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+
+
+.section1 {
+    display: flex;
+    max-width: 100%;
+    margin-top: 70px;
+    background-color: #F2ECE0; 
+    padding: 50px 40px;
+    align-items: center; 
+    gap: 40px;
+}
+
+.section1-img {
+    min-width: 50%;
+}
+
+.story-image {
+    width: 100%;
+    display: block;
+    height: 400px; 
+    object-fit: cover;
+}
+
+.section1-title {
+    font-family: $titre;
+    color: $brun;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.section1-text {
+    font-family: $texte;
+    color: $brun;
+    font-size: 24px;
+    font-weight: bold; 
+    margin-bottom: 15px;
+}
+
+.story-text {
+    font-family: $texte;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.values-section {
+    background-color: #F2ECE0; 
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center;    
+    max-width: 100%;
+    margin-top: 70px;
+    padding: 20px 5px;
+}
+
+
+.value-icon {
+    width: 400px; 
+    height: auto;
+    display: block;
+}
+
+.value-text {
+    font-family: $texte;
+    font-size: 1.1em;
+    line-height: 1.4;
+    color: $brun;
+    margin: 0;
+}
+
+.bold-text {
+    font-weight: 700; 
+}
+
+.value-item {
+    position: relative; 
+    transition: transform 0.5s ease-out; 
+}
+
+.value-item:hover {
+    transform: translateY(-20px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+    cursor: pointer;
+}
+
+
+@media (max-width: 650px) {
+    .values-section {
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px 5px;
+    }
+    
+    .value-item {
+        max-width: 300px; 
+    }
+}
