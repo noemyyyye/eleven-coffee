@@ -145,35 +145,509 @@ header .bandeau-defilant .defilement-contenu span {
   font-size: 20px;
   font-weight: 500;
 }
+.blockPresentation p:hover {
+  transform: scale(1.05);
+}
 
 a {
   text-decoration: none;
   color: #41291f;
   font-family: "Epilogue", sans-serif;
 }
+a:hover {
+  transform: scale(1.05);
+}
 
 .blockAEmporter {
-  background-color: #41291f;
+  background-color: #e3d1bb;
   display: flex;
-  padding: 60px;
+  padding: 50px;
 }
 .blockAEmporter div {
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-direction: column;
-  padding: 130px 150px;
-  color: #e3d1bb;
+  padding: 100px 80px;
+  color: #41291f;
   align-content: center;
 }
-.blockAEmporter h2 {
+.blockAEmporter div h2 {
   font-family: "Figtree", sans-serif;
-  font-size: 50px;
+  font-size: 60px;
 }
-.blockAEmporter p {
-  margin-top: 20px;
+.blockAEmporter div p {
+  margin-top: 40px;
   font-family: "Epilogue", sans-serif;
 }
 .blockAEmporter img {
-  width: 20%;
-  border-radius: 20px;
+  width: 55%;
+  border-radius: 15px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blockLivraison {
+  background-color: #e3d1bb;
+  display: flex;
+  padding: 50px;
+}
+.blockLivraison div {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 80px;
+  color: #41291f;
+  align-content: center;
+}
+.blockLivraison div h2 {
+  font-family: "Figtree", sans-serif;
+  font-size: 60px;
+}
+.blockLivraison div p {
+  margin-top: 40px;
+  font-family: "Epilogue", sans-serif;
+}
+.blockLivraison img {
+  width: 55%;
+  border-radius: 15px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blockEspaceCoworking {
+  background-color: #e3d1bb;
+  padding: 50px;
+}
+.blockEspaceCoworking .text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #41291f;
+  text-align: center;
+  padding: 50px;
+}
+.blockEspaceCoworking .text h2 {
+  font-family: "Figtree", sans-serif;
+  font-size: 50px;
+}
+.blockEspaceCoworking .text p {
+  margin-top: 20px;
+  font-family: "Epilogue", sans-serif;
+}
+.blockEspaceCoworking .carrousel {
+  display: flex;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 30px;
+}
+.blockEspaceCoworking .carrousel .un {
+  border-radius: 15px;
+  margin-right: 20px;
+}
+.blockEspaceCoworking .carrousel .deux {
+  border-radius: 15px;
+}
+.blockEspaceCoworking .carrousel .trois {
+  border-radius: 15px;
+  margin-left: 20px;
+}
+
+.blockCarteFidelite {
+  background: url("./IMAGES/carteFidelite4.png") no-repeat center center;
+  background-size: cover;
+  height: 580px;
+}
+.blockCarteFidelite div {
+  color: #41291f;
+  text-align: center;
+  padding: 50px;
+  color: #e3d1bb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 200px;
+}
+.blockCarteFidelite div h2 {
+  font-family: "Figtree", sans-serif;
+  font-size: 50px;
+}
+.blockCarteFidelite div p {
+  margin-top: 20px;
+  font-family: "Epilogue", sans-serif;
+}
+
+.footer {
+  background-color: #41291f;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  font-family: "Figtree", sans-serif;
+}
+.footer img {
+  height: 80px;
+}
+.footer .footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 150px;
+}
+.footer .separator {
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 150px;
+}
+.footer .btn {
+  background-color: #b08e72;
+  color: #41291f;
+  text-decoration: none;
+  font-family: "Epilogue", sans-serif;
+  font-size: 16px;
+  border-radius: 50px;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+  font-weight: 700;
+}
+.footer .btn.secondary {
+  background-color: transparent;
+  border: 2px solid #b08e72;
+  color: #b08e72;
+}
+.footer .btn:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+  header .text-banner {
+    width: 80%;
+    padding-left: 40px;
+    padding-top: 120px;
+  }
+  main .notre-histoire {
+    flex-direction: column;
+  }
+  main .history-content, main .history-img {
+    width: 100%;
+  }
+  main .pourquoi-nous {
+    flex-direction: column;
+    padding: 50px 24px;
+  }
+  main .pourquoi-nous .text-why-us, main .pourquoi-nous .img-why-us {
+    width: 100%;
+  }
+  main .contact-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footer {
+    justify-content: center;
+  }
+}
+@media (max-width: 1200px) {
+  header .text-banner {
+    width: 55%;
+    padding-left: 80px;
+    padding-top: 130px;
+  }
+  .slider .slide-item img {
+    width: 220px;
+    height: 360px;
+  }
+  .promo-section {
+    padding: 50px 30px;
+  }
+  .pourquoi-nous {
+    padding: 70px 60px;
+  }
+}
+@media (max-width: 992px) {
+  header .menu .navigation ul {
+    gap: 40px;
+  }
+  header .text-banner {
+    width: 65%;
+    padding-left: 50px;
+    padding-top: 110px;
+  }
+  header .banner h1 {
+    font-size: 42px;
+  }
+  header .banner p {
+    font-size: 17px;
+  }
+  .best-section {
+    padding: 40px 0;
+  }
+  .slider .slide-item img {
+    width: 200px;
+    height: 330px;
+  }
+  main .notre-histoire {
+    gap: 0;
+  }
+  main .history-content {
+    padding: 40px;
+  }
+  main .pourquoi-nous {
+    gap: 40px;
+    padding: 60px 40px;
+  }
+  .promo-section {
+    gap: 20px;
+  }
+  .promo-section .promo-col {
+    height: 320px;
+  }
+  .contact-section {
+    gap: 40px;
+    padding: 50px 30px;
+  }
+  .footer {
+    gap: 16px;
+    padding: 32px 16px;
+  }
+  .footer .separator {
+    height: 120px;
+  }
+}
+@media (max-width: 768px) {
+  header .menu {
+    padding: 0 16px;
+  }
+  header .menu .logo img {
+    width: 130px;
+  }
+  header .menu .navigation ul {
+    gap: 22px;
+  }
+  header .menu .navigation a.basic {
+    font-size: 15px;
+  }
+  header .menu .navigation a.contact {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+  header .banner {
+    height: 520px;
+  }
+  header .text-banner {
+    width: 85%;
+    padding-left: 24px;
+    padding-top: 90px;
+    gap: 16px;
+  }
+  header .banner h1 {
+    font-size: 36px;
+  }
+  header .banner p {
+    font-size: 16px;
+  }
+  header .text-banner .Discovery {
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+  main .notre-histoire {
+    flex-direction: column;
+  }
+  main .history-content,
+  main .history-img {
+    width: 100%;
+  }
+  main .history-img img {
+    height: 360px;
+  }
+  .best-title {
+    font-size: 32px;
+  }
+  .slider {
+    padding-top: 20px;
+  }
+  .slider .slide-item img {
+    width: 190px;
+    height: 310px;
+  }
+  .slider .slider-track {
+    animation-duration: 24s;
+  }
+  main .pourquoi-nous {
+    flex-direction: column;
+    padding: 46px 24px;
+    gap: 26px;
+  }
+  main .pourquoi-nous .text-why-us,
+  main .pourquoi-nous .img-why-us {
+    width: 100%;
+  }
+  main .pourquoi-nous .text-why-us h3 {
+    font-size: 28px;
+  }
+  main .pourquoi-nous .text-why-us p {
+    font-size: 15px;
+  }
+  .promo-section {
+    flex-direction: column;
+    padding: 40px 24px;
+    gap: 16px;
+  }
+  .promo-section .promo-col {
+    height: 280px;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 30px 24px !important;
+  }
+  .contact-section {
+    flex-direction: column;
+    padding: 40px 24px;
+    gap: 24px;
+  }
+  .contact-map {
+    height: 260px;
+  }
+  .contact-map iframe {
+    height: 100%;
+  }
+  .contact-infos .contact-btn {
+    width: 100%;
+    max-width: 380px;
+  }
+  .footer {
+    justify-content: center;
+    gap: 24px;
+  }
+  .footer .separator {
+    display: none;
+  }
+  .footer .footer-column {
+    min-width: 45%;
+    align-items: center;
+    text-align: center;
+  }
+  .footer .btn {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+@media (max-width: 560px) {
+  header .menu .navigation ul {
+    gap: 14px;
+  }
+  header .menu .navigation a.basic {
+    font-size: 14px;
+  }
+  header .menu .navigation a.contact {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+  header .menu .logo img {
+    width: 110px;
+  }
+  header .banner {
+    height: 480px;
+  }
+  header .text-banner {
+    width: 92%;
+    padding-left: 16px;
+    padding-top: 80px;
+  }
+  header .banner h1 {
+    font-size: 30px;
+  }
+  header .banner p {
+    font-size: 15px;
+  }
+  header .text-banner .Discovery {
+    font-size: 15px;
+    padding: 10px 16px;
+  }
+  main .history-content {
+    padding: 28px 18px;
+  }
+  main .history-content h2 {
+    font-size: 26px;
+  }
+  main .history-content p {
+    font-size: 15px;
+  }
+  main .history-content a {
+    font-size: 15px;
+    padding: 12px 18px;
+  }
+  main .history-img img {
+    height: 300px;
+  }
+  .best-title {
+    font-size: 26px;
+  }
+  .slider .slide-item img {
+    width: 170px;
+    height: 280px;
+  }
+  .slider .slider-track {
+    gap: 28px;
+    animation-duration: 26s;
+  }
+  main .pourquoi-nous .text-why-us h3 {
+    font-size: 24px;
+  }
+  main .pourquoi-nous .text-why-us p {
+    font-size: 14.5px;
+  }
+  .promo-section .promo-col {
+    height: 250px;
+  }
+  .promo-section .promo-col h3 {
+    font-size: 22px;
+  }
+  .promo-section .promo-col p {
+    font-size: 16px;
+  }
+  .contact-infos .info-box {
+    padding: 14px 16px;
+  }
+  .contact-infos .contact-btn {
+    font-size: 18px;
+  }
+  .footer {
+    padding: 28px 16px;
+  }
+  .footer img {
+    height: 64px;
+  }
+  .footer .footer-column {
+    min-width: 100%;
+  }
+  .footer .btn {
+    max-width: none;
+    width: 100%;
+  }
+}
+@media (max-width: 380px) {
+  header .banner {
+    height: 440px;
+  }
+  header .banner h1 {
+    font-size: 26px;
+  }
+  .slider .slide-item img {
+    width: 150px;
+    height: 240px;
+  }
+  main .history-img img {
+    height: 260px;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
 }/*# sourceMappingURL=service.css.map */
