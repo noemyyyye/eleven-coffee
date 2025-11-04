@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  background-color: #E3D1BB;
+}
+header .menu .logo {
+  padding: 15px 0 15px 40px;
+}
+header .menu .logo img {
+  width: 150px;
+}
+header .menu .navigation ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 80px;
+  list-style: none;
+  padding-right: 40px;
+}
+header .menu .navigation a {
+  text-decoration: none;
+  list-style: none;
+  font-size: 16px;
+  color: #41291F;
+  font-family: "Epilogue", sans-serif;
+  display: inline-block;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+header .menu .navigation a.contact {
+  background-color: #41291F;
+  color: #E3D1BB;
+  text-decoration: none;
+  font-family: "Epilogue", sans-serif;
+  font-size: 16px;
+  border-radius: 50px;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+}
+header .menu .navigation a:hover {
+  transform: scale(1.12);
+  color: #B08E72;
+}
+
+main .banner {
+  background: url("Banniere.png") no-repeat center center;
+  background-size: cover;
+  height: 580px;
+  display: flex;
+  align-items: center;
+}
+main .banner .text-banner {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  padding-left: 150px;
+}
+main .banner .text-banner h1 {
+  font-family: "Figtree", sans-serif;
+  color: #E3D1BB;
+  font-size: 50px;
+  padding-bottom: 10px;
+}
+main .banner .text-banner p {
+  font-family: "Epilogue", sans-serif;
+  color: #ffffff;
+  font-size: 18px;
+}
+main .banner .text-banner .Discovery {
+  background-color: #B08E72;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Epilogue", sans-serif;
+  font-size: 18px;
+  border-radius: 50px;
+  padding: 15px 20px;
+  display: inline-block;
+  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+}
+main .banner .text-banner .Discovery:hover {
+  transform: scale(1.05);
+}
+main .banner .text-banner .Discovery:hover {
+  background-color: #41291F;
+}
+main .nos-cafes {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 80px 0;
+}
+main .nos-cafes h2 {
+  font-family: "Figtree", sans-serif;
+  font-size: 40px;
+  color: #41291F;
+  margin-bottom: 60px;
+}
+main .nos-cafes .liste-cafes {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main .nos-cafes .carte-cafe {
+  width: 250px;
+  text-align: center;
+  transition: transform 0.25s ease;
+  cursor: pointer;
+}
+main .nos-cafes .carte-cafe:hover {
+  transform: translateY(-8px);
+}
+main .nos-cafes .carte-cafe img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+main .nos-cafes .carte-cafe img:hover {
+  transform: scale(1.05);
+}
+main .nos-cafes .carte-cafe h3 {
+  font-family: "Figtree", sans-serif;
+  font-size: 22px;
+  color: #41291F;
+  margin-bottom: 10px;
+}
+main .nos-cafes .carte-cafe p {
+  font-family: "Epilogue", sans-serif;
+  font-size: 16px;
+  color: #41291F;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+main .bandeau-defilant {
+  width: 100%;
+  overflow: hidden;
+  background-color: #41291F;
+  color: #E3D1BB;
+  padding: 15px 0;
+  font-weight: 500;
+  font-family: "Epilogue", sans-serif;
+  position: relative;
+  white-space: nowrap;
+}
+main .bandeau-defilant .defilement-contenu {
+  display: inline-block;
+  white-space: nowrap;
+  animation: defile 20s linear infinite;
+}
+main .bandeau-defilant .defilement-contenu span {
+  display: inline-block;
+  margin-right: 2rem;
+  font-size: 1.2rem;
+}
+
+.section-promo {
+  background-color: #E3D1BB;
+  text-align: center;
+  padding: 100px 0 120px 0;
+}
+.section-promo .promo-contenu {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.section-promo .promo-visuel {
+  position: relative;
+  display: inline-block;
+}
+.section-promo .promo-visuel .icon-nouveau {
+  position: absolute;
+  bottom: 30px;
+  margin-left: 40px;
+  transform: rotate(10deg);
+  width: 100px;
+  z-index: 3;
+}
+.section-promo .promo-visuel .promo-titre {
+  font-family: "Figtree", sans-serif;
+  font-weight: bolder;
+  font-size: 80px;
+  color: #41291F;
+  text-align: center;
+  margin-bottom: -60px;
+  position: relative;
+  z-index: 1;
+}
+.section-promo .promo-visuel .promo-soustitre {
+  font-family: "Epilogue", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #41291F;
+  position: absolute;
+  right: 0;
+  top: 80px;
+}
+.section-promo .promo-visuel .coffee-img {
+  width: 280px;
+  position: relative;
+  z-index: 2;
+}
+.section-promo .promo-texte {
+  font-family: "Epilogue", sans-serif;
+  font-size: 16px;
+  color: #41291F;
+  line-height: 1.6;
+}
+.section-promo .btn-fleche {
+  background-color: #B08E72;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  width: 70px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+.section-promo .btn-fleche:hover {
+  background-color: #41291F;
+  transform: translateY(-2px);
+}
+.section-promo .btn-fleche:active {
+  transform: scale(0.96);
+}
+
+.nouveau {
+  position: absolute;
+  width: 10%;
+}
+
+.nos-boissons-chaudes {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 80px 0;
+}
+.nos-boissons-chaudes h2 {
+  font-family: "Figtree", sans-serif;
+  font-size: 40px;
+  color: #41291F;
+  margin-bottom: 60px;
+}
+.nos-boissons-chaudes .liste-boissons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.nos-boissons-chaudes .boisson {
+  width: 250px;
+  text-align: center;
+  transition: transform 0.25s ease;
+}
+.nos-boissons-chaudes .boisson:hover {
+  transform: translateY(-8px);
+}
+.nos-boissons-chaudes .boisson img {
+  width: 120px;
+  max-width: 220px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+.nos-boissons-chaudes .boisson img:hover {
+  transform: scale(1.05);
+}
+.nos-boissons-chaudes .boisson h3 {
+  font-family: "Figtree", sans-serif;
+  font-size: 22px;
+  color: #41291F;
+  margin-bottom: 10px;
+}
+.nos-boissons-chaudes .boisson p {
+  font-family: "Epilogue", sans-serif;
+  font-size: 16px;
+  color: #41291F;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+.footer {
+  background-color: #41291F;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  font-family: "Figtree", sans-serif;
+}
+.footer img {
+  height: 80px;
+}
+.footer .footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 150px;
+}
+.footer .separator {
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 150px;
+}
+.footer .btn {
+  background-color: #B08E72;
+  color: #41291F;
+  text-decoration: none;
+  font-family: "Epilogue", sans-serif;
+  font-size: 16px;
+  border-radius: 50px;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+  font-weight: 700;
+}
+.footer .btn.secondary {
+  background-color: transparent;
+  border: 2px solid #B08E72;
+  color: #B08E72;
+}
+.footer .btn:hover {
+  opacity: 0.85;
+}
+
+@keyframes defile {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}/*# sourceMappingURL=menu.css.map */

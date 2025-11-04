@@ -1,0 +1,450 @@
+// =======================
+// VARIABLES
+// =======================
+
+$brun: #41291F;
+$creme: #E3D1BB;
+$beige: #B08E72;
+$blanc: #ffffff;
+$brun-f: #41291F;
+
+$titre: "Figtree", sans-serif;
+$texte: "Epilogue", sans-serif;
+
+$rond: 50px;
+$vite: .25s;
+$ease: ease;
+
+$gap-large: 80px;
+$pad-large: 40px;
+
+
+// =======================
+// MIXINS
+// =======================
+
+@mixin flex($justify: space-between, $align: center, $gap: 0) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin btn($bg, $fg, $py: 15px, $px: 20px, $fs: 18px, $radius: $rond) {
+  background-color: $bg;
+  color: $fg;
+  text-decoration: none;
+  font-family: $texte;
+  font-size: $fs;
+  border-radius: $radius;
+  padding: $py $px;
+  display: inline-block;
+  transition: transform $vite $ease, color $vite $ease, background-color $vite $ease;
+}
+
+@mixin zoom($scale: 1.05) {
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+@mixin lien($color: $brun, $fs: 16px) {
+  text-decoration: none;
+  list-style: none;
+  font-size: $fs;
+  color: $color;
+  font-family: $texte;
+  display: inline-block;
+  transition: transform $vite $ease, color $vite $ease;
+}
+
+@mixin defile($time: 20s) {
+  display: inline-block;
+  white-space: nowrap;
+  animation: defile $time linear infinite;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+// =======================
+// HEADER
+// =======================
+
+header {
+  .menu {
+    @include flex(space-between, center);
+    width: 100%;
+    background-color: $creme;
+
+    .logo {
+      padding: 15px 0 15px $pad-large;
+
+      img {
+        width: 150px;
+      }
+    }
+
+    .navigation {
+      ul {
+        @include flex(flex-start, center, $gap-large);
+        list-style: none;
+        padding-right: $pad-large;
+      }
+
+      a {
+        @include lien();
+
+        &.contact {
+          @include btn($brun, $creme, 10px, 20px, 16px);
+        }
+
+        &:hover {
+          transform: scale(1.12);
+          color: $beige;
+        }
+      }
+    }
+  }
+}
+
+
+// =======================
+// MAIN
+// =======================
+
+main {
+  .banner {
+    background: url('Banniere.png') no-repeat center center;
+    background-size: cover;
+    height: 580px;
+    display: flex;
+    align-items: center;
+
+    .text-banner {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+      padding-left: 150px;
+
+      h1 {
+        font-family: $titre;
+        color: $creme;
+        font-size: 50px;
+        padding-bottom: 10px;
+      }
+
+      p {
+        font-family: $texte;
+        color: $blanc;
+        font-size: 18px;
+      }
+
+      .Discovery {
+        @include btn($beige, $blanc);
+        @include zoom(1.05);
+
+        &:hover {
+          background-color: $brun;
+        }
+      }
+    }
+  }
+
+  .nos-cafes {
+    background-color: $blanc;
+    text-align: center;
+    padding: 80px 0;
+
+    h2 {
+      font-family: $titre;
+      font-size: 40px;
+      color: $brun;
+      margin-bottom: 60px;
+    }
+
+    .liste-cafes {
+      @include flex(center, flex-start, 60px);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .carte-cafe {
+      width: 250px;
+      text-align: center;
+      transition: transform $vite $ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-8px);
+      }
+
+      img {
+        width: 100%;
+        max-width: 220px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        @include zoom(1.05);
+      }
+
+      h3 {
+        font-family: $titre;
+        font-size: 22px;
+        color: $brun;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-family: $texte;
+        font-size: 16px;
+        color: $brun;
+        opacity: 0.8;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  .bandeau-defilant {
+    width: 100%;
+    overflow: hidden;
+    background-color: $brun;
+    color: $creme;
+    padding: 15px 0;
+    font-weight: 500;
+    font-family: $texte;
+    position: relative;
+    white-space: nowrap;
+
+    .defilement-contenu {
+      @include defile(20s);
+
+      span {
+        display: inline-block;
+        margin-right: 2rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+
+// =======================
+// SECTION PROMO
+// =======================
+
+.section-promo {
+  background-color: $creme;
+  text-align: center;
+  padding: 100px 0 120px 0;
+
+  .promo-contenu {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .promo-visuel {
+    position: relative;
+    display: inline-block;
+
+    .icon-nouveau {
+      position: absolute;
+      bottom: 30px;
+      margin-left: 40px;
+      transform: rotate(10deg);
+      width: 100px;
+      z-index: 3;
+    }
+
+    .promo-titre {
+      font-family: $titre;
+      font-weight: bolder;
+      font-size: 80px;
+      color: $brun;
+      text-align: center;
+      margin-bottom: -60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .promo-soustitre {
+      font-family: $texte;
+      font-size: 20px;
+      font-weight: 600;
+      color: $brun;
+      position: absolute;
+      right: 0;
+      top: 80px;
+    }
+
+    .coffee-img {
+      width: 280px;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .promo-texte {
+    font-family: $texte;
+    font-size: 16px;
+    color: $brun;
+    line-height: 1.6;
+  }
+
+  .btn-fleche {
+    background-color: $beige;
+    color: $blanc;
+    border: none;
+    border-radius: 50px;
+    width: 70px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all $vite $ease;
+
+    &:hover {
+      background-color: $brun;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: scale(0.96);
+    }
+  }
+}
+
+.nouveau {
+  position: absolute;
+  width: 10%;
+}
+
+
+// =======================
+// SECTION BOISSONS CHAUDES
+// =======================
+
+.nos-boissons-chaudes {
+  background-color: $blanc;
+  text-align: center;
+  padding: 80px 0;
+
+  h2 {
+    font-family: $titre;
+    font-size: 40px;
+    color: $brun;
+    margin-bottom: 60px;
+  }
+
+  .liste-boissons {
+    @include flex(center, flex-start, 60px);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .boisson {
+    width: 250px;
+    text-align: center;
+    transition: transform $vite $ease;
+
+    &:hover {
+      transform: translateY(-8px);
+    }
+
+    img {
+      width: 120px;
+      max-width: 220px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      @include zoom(1.05);
+    }
+
+    h3 {
+      font-family: $titre;
+      font-size: 22px;
+      color: $brun;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-family: $texte;
+      font-size: 16px;
+      color: $brun;
+      opacity: 0.8;
+      line-height: 1.4;
+    }
+  }
+}
+
+
+// =======================
+// FOOTER
+// =======================
+
+.footer {
+  background-color: $brun;
+  color: $blanc;
+  @include flex(space-around, center, 20px);
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  font-family: $titre;
+
+  img {
+    height: 80px;
+  }
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 150px;
+  }
+
+  .separator {
+    width: 1px;
+    background-color: rgba($blanc, .3);
+    height: 150px;
+  }
+
+  .btn {
+    @include btn($beige, $brun, 10px, 20px, 16px, 50px);
+    font-weight: 700;
+
+    &.secondary {
+      background-color: transparent;
+      border: 2px solid $beige;
+      color: $beige;
+    }
+
+    &:hover {
+      opacity: .85;
+    }
+  }
+}
+
+
+// =======================
+// ANIMATIONS
+// =======================
+
+@keyframes defile {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
