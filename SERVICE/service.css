@@ -1,19 +1,8 @@
-/* =========================
-   Variables
-   ========================= */
-/* Polices */
-/* =========================
-      Mixins
-      ========================= */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-/* =========================
-      Header
-      ========================= */
 header .menu {
   display: flex;
   justify-content: space-between;
@@ -52,30 +41,28 @@ header .menu .navigation a.contact {
   font-family: "Epilogue", sans-serif;
   font-size: 16px;
   border-radius: 50px;
-  padding: 15px 20px;
+  padding: 10px 20px;
   display: inline-block;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, opacity 0.25s ease;
+  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease;
 }
 header .menu .navigation a:hover {
   transform: scale(1.12);
   color: #b08e72;
 }
 header .banner {
-  background: url("./bannerimg.png") no-repeat center center;
+  background: url("./IMAGES/intro.png") no-repeat center center;
   background-size: cover;
   height: 580px;
 }
 header .banner h1 {
   font-family: "Figtree", sans-serif;
   color: #e3d1bb;
-  font-size: 50px;
+  font-size: 80px;
   padding-bottom: 10px;
 }
 header .banner p {
   font-family: "Epilogue", sans-serif;
-  color: #ffffff;
+  color: #e3d1bb;
   font-size: 18px;
 }
 header .banner a {
@@ -87,9 +74,7 @@ header .banner a {
   border-radius: 50px;
   padding: 15px 20px;
   display: inline-block;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, opacity 0.25s ease;
+  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease;
 }
 header .text-banner {
   width: 40%;
@@ -98,7 +83,7 @@ header .text-banner {
   flex-direction: column;
   align-items: flex-start;
   padding-left: 150px;
-  padding-top: 150px;
+  padding-top: 130px;
 }
 header .text-banner .Discovery {
   background-color: #b08e72;
@@ -109,9 +94,7 @@ header .text-banner .Discovery {
   border-radius: 50px;
   padding: 15px 20px;
   display: inline-block;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, opacity 0.25s ease;
+  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease;
 }
 header .text-banner .Discovery:hover {
   transform: scale(1.05);
@@ -141,7 +124,6 @@ header .bandeau-defilant .defilement-contenu span {
   font-size: 1.2rem;
 }
 
-/* keyframes (unique) */
 @keyframes defile {
   0% {
     transform: translateX(0%);
@@ -150,296 +132,153 @@ header .bandeau-defilant .defilement-contenu span {
     transform: translateX(-50%);
   }
 }
-/* =========================
-      Main
-      ========================= */
-main .notre-histoire {
+.blockPresentation {
   display: flex;
+  margin: 125px 60px;
+  justify-content: space-around;
 }
-main .history-content {
-  width: 50%;
+
+.blockPresentation p {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+.blockPresentation p:hover {
+  transform: scale(1.05);
+}
+
+a {
+  text-decoration: none;
+  color: #41291f;
+  font-family: "Epilogue", sans-serif;
+}
+a:hover {
+  transform: scale(1.05);
+}
+
+.blockAEmporter {
+  background-color: #e3d1bb;
+  display: flex;
+  padding: 50px;
+}
+.blockAEmporter div {
+  width: 45%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  background-color: #f2ece0;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-main .history-content h2 {
-  font-family: "Figtree", sans-serif;
-  font-size: 35px;
+  padding: 100px 80px;
   color: #41291f;
-  margin-bottom: 15px;
+  align-content: center;
 }
-main .history-content p {
+.blockAEmporter div h2 {
+  font-family: "Figtree", sans-serif;
+  font-size: 60px;
+}
+.blockAEmporter div p {
+  margin-top: 40px;
   font-family: "Epilogue", sans-serif;
-  font-size: 16px;
-  margin-bottom: 30px;
-  text-align: justify;
 }
-main .history-content a {
-  background-color: #41291f;
-  color: #ffffff;
-  text-decoration: none;
-  font-family: "Epilogue", sans-serif;
-  font-size: 16px;
-  border-radius: 50px;
-  padding: 15px 20px;
-  display: inline-block;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, opacity 0.25s ease;
-  border-radius: 50px;
-}
-main .history-img {
-  width: 50%;
-  margin-bottom: -5px;
-}
-main .history-img img {
-  width: 100%;
+.blockAEmporter img {
+  width: 55%;
+  border-radius: 15px;
   height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .best-section {
-  background: #41291f;
-  padding: 50px 0;
-}
-main .best-section .best-title {
-  position: relative;
-  text-align: center;
-  font-size: 38px;
-  font-weight: 700;
-  margin-bottom: 40px;
-  font-family: "Figtree", sans-serif;
-  color: #f2ece0;
-  padding-top: 40px;
-}
-main .best-section .best-title::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -8px;
-  width: 90px;
-  height: 5px;
-  background: #b08e72;
-  border-radius: 10px;
-  transform: translateX(calc(-50% - 50px));
-  animation: underlineSlide 2s ease-in-out infinite alternate;
-  will-change: transform;
-}
-@keyframes underlineSlide {
-  from {
-    transform: translateX(calc(-50% - 50px));
-  }
-  to {
-    transform: translateX(calc(-50% + 50px));
-  }
-}
-main .slider {
-  overflow: hidden;
-  width: 100%;
-  background-color: #41291f;
-  padding-top: 30px;
-}
-main .slider .slider-track {
-  display: flex;
-  gap: 50px;
-  animation: defile-slider 20s linear infinite;
-}
-main .slider .slide-item {
-  text-align: center;
-  flex-shrink: 0;
-}
-main .slider .slide-item img {
-  width: 250px;
-  height: 400px;
-  border-radius: 150px;
-}
-main .slider .slide-item p {
-  margin-top: 8px;
-  font-weight: 500;
-  font-family: "Epilogue", sans-serif;
-  color: #f2ece0;
-}
-@keyframes defile-slider {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-main .pourquoi-nous {
+
+.blockLivraison {
   background-color: #e3d1bb;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 100px;
-  gap: 60px;
+  padding: 50px;
 }
-main .pourquoi-nous .text-why-us {
+.blockLivraison div {
+  width: 45%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 50%;
-  text-align: justify;
-}
-main .pourquoi-nous .text-why-us h3 {
-  font-size: 35px;
+  padding: 100px 80px;
   color: #41291f;
+  align-content: center;
+}
+.blockLivraison div h2 {
   font-family: "Figtree", sans-serif;
-  margin-bottom: 20px;
+  font-size: 60px;
 }
-main .pourquoi-nous .text-why-us p {
-  font-size: 16px;
-  color: #000000;
+.blockLivraison div p {
+  margin-top: 40px;
   font-family: "Epilogue", sans-serif;
-  line-height: 1.4;
 }
-main .pourquoi-nous .img-why-us {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-}
-main .pourquoi-nous .img-why-us img {
-  width: 100%;
-  max-width: 500px;
+.blockLivraison img {
+  width: 55%;
+  border-radius: 15px;
+  height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .promo-section {
+
+.blockEspaceCoworking {
   background-color: #e3d1bb;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 30px;
-  padding: 60px 40px;
+  padding: 50px;
 }
-main .promo-section .promo-col {
-  flex: 1;
-  height: 350px;
-  color: #ffffff;
+.blockEspaceCoworking .text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-main .promo-section .promo-col::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.2);
-}
-main .promo-section .promo-col * {
-  position: relative;
-  z-index: 1;
-}
-main .promo-section .promo-col h3 {
-  font-size: 26px;
-  margin-bottom: 10px;
-}
-main .promo-section .promo-col p {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-main .promo-section .promo-col button {
-  background-color: #b08e72;
-  color: #ffffff;
-  text-decoration: none;
-  font-family: "Epilogue", sans-serif;
-  font-size: 20px;
-  border-radius: 999px;
-  padding: 10px 20px;
-  display: inline-block;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, opacity 0.25s ease;
-}
-main .promo-section .promo-col.left {
-  align-items: flex-start;
-  padding-left: 50px;
-  font-family: "Epilogue", sans-serif;
-  background-image: url("./promo 1.png");
-}
-main .promo-section .promo-col.right {
-  align-items: flex-end;
-  padding-right: 50px;
-  text-align: right;
-  font-family: "Epilogue", sans-serif;
-  background-image: url("./promo 2.png");
-}
-main .contact-section {
-  background: #e3d1bb;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 60px;
-  padding: 60px 40px;
-}
-main .contact-section .contact-map {
-  flex: 1;
-  border-radius: 10px;
-  overflow: hidden;
-  background: #e3d1bb;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-}
-main .contact-section .contact-map iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-main .contact-section .contact-infos {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  font-family: "Epilogue", sans-serif;
   color: #41291f;
-}
-main .contact-section .contact-infos .info-box {
-  background: #e3d1bb;
-  border-radius: 8px;
-  padding: 16px 20px;
   text-align: center;
+  padding: 50px;
 }
-main .contact-section .contact-infos .info-box h4 {
-  font-size: 18px;
-  margin-bottom: 8px;
-  font-weight: 700;
+.blockEspaceCoworking .text h2 {
+  font-family: "Figtree", sans-serif;
+  font-size: 50px;
 }
-main .contact-section .contact-infos .info-box p {
-  font-size: 16px;
-  margin: 0;
-  line-height: 1.4;
-}
-main .contact-section .contact-infos .contact-btn {
-  background-color: #b08e72;
-  color: #ffffff;
-  text-decoration: none;
+.blockEspaceCoworking .text p {
+  margin-top: 20px;
   font-family: "Epilogue", sans-serif;
-  font-size: 20px;
-  border-radius: 999px;
-  padding: 12px 28px;
-  display: inline-block;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, opacity 0.25s ease;
 }
-main .contact-section .contact-infos .contact-btn:hover {
-  background-color: #41291f;
-  transform: translateY(-2px);
+.blockEspaceCoworking .carrousel {
+  display: flex;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 30px;
+}
+.blockEspaceCoworking .carrousel .un {
+  border-radius: 15px;
+  margin-right: 20px;
+}
+.blockEspaceCoworking .carrousel .deux {
+  border-radius: 15px;
+}
+.blockEspaceCoworking .carrousel .trois {
+  border-radius: 15px;
+  margin-left: 20px;
 }
 
-/* =========================
-      Footer
-      ========================= */
+.blockCarteFidelite {
+  background: url("./IMAGES/carteFidelite4.png") no-repeat center center;
+  background-size: cover;
+  height: 580px;
+}
+.blockCarteFidelite div {
+  color: #41291f;
+  text-align: center;
+  padding: 50px;
+  color: #e3d1bb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 200px;
+}
+.blockCarteFidelite div h2 {
+  font-family: "Figtree", sans-serif;
+  font-size: 50px;
+}
+.blockCarteFidelite div p {
+  margin-top: 20px;
+  font-family: "Epilogue", sans-serif;
+}
+
 .footer {
   background-color: #41291f;
   color: #ffffff;
@@ -474,9 +313,7 @@ main .contact-section .contact-infos .contact-btn:hover {
   border-radius: 50px;
   padding: 10px 20px;
   display: inline-block;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, opacity 0.25s ease;
+  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease;
   font-weight: 700;
 }
 .footer .btn.secondary {
@@ -809,4 +646,67 @@ main .contact-section .contact-infos .contact-btn:hover {
   main .history-img img {
     height: 260px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+@media (max-width: 768px) {
+  header .menu {
+    padding: 0px;
+  }
+  header .text-banner {
+    padding-top: 150px;
+  }
+  .blockPresentation {
+    display: flex;
+    flex-direction: column;
+  }
+  .blockAEmporter {
+    display: flex;
+    flex-direction: column;
+  }
+  .blockAEmporter div {
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+  }
+  .blockAEmporter img {
+    width: 100%;
+  }
+  .blockLivraison {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .blockLivraison div {
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+  }
+  .blockLivraison img {
+    width: 100%;
+  }
+  .blockEspaceCoworking {
+    display: flex;
+    flex-direction: column;
+  }
+  .blockEspaceCoworking .carrousel {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    padding: 0px;
+  }
+  .blockEspaceCoworking .carrousel .un {
+    margin: 0px;
+  }
+  .blockEspaceCoworking .carrousel .deux {
+    padding: 10px 0px;
+  }
+  .blockEspaceCoworking .carrousel .trois {
+    margin: 0px;
+  }
+  .blockCarteFidelite {
+    height: 100%;
+  }
+  .blockCarteFidelite div {
+    padding: 100px;
+  }
+}/*# sourceMappingURL=service.css.map */
