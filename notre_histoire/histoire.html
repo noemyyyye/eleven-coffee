@@ -11,7 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Figtre… rel="
         stylesheet">
 </head>
-
+<script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.navigation');
+  
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+  </script>
 <body>
 
     <header>
@@ -21,6 +29,12 @@
             <div class="logo">
                 <img src="./img/Logo-Eleven coffee 3.png" alt="Logo du site">
             </div>
+
+            <div class="burger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
 
             <div class="navigation">
 
@@ -82,7 +96,7 @@
             <div class="section1-txt">
                 <h2 class="section1-title">Une aventure née d'une passion commune.</h2>
                 <p class="section1-text">
-                    Tout a commencé avec une idée simple : créer un café qui nous ressemble.
+                    Tout a commencé avec une idée simple : créer un café qui nous ressemble
                 </p>
                 <p class="story-text">
                     Nous voulions un lieu à taille humaine, où la qualité du café se marie à une ambiance conviviale.
@@ -118,12 +132,107 @@
             </div>
         </div>
 
+        <section class="notre-histoire">
+            <div class="bloc histoire">
+              <div class="texte">
+                <h2>Un espace cosy</h2>
+                <h3>Au cœur battant de la ville.</h3> 
+                <p>
+                  Entre murs en briques et arômes de café fraîchement moulu, notre espace est une véritable parenthèse urbaine.<br><br>
+                  Que vous veniez y travailler, bouquiner ou simplement savourer un moment de calme, chaque coin du café est pensé pour vous faire sentir comme à la maison.
+                  Un lieu vivant, où l’on partage autant les sourires que les saveurs.
+                </p>
+                <a href="#" class="cta">Découvrir le lieux</a>
+              </div>
+              <div class="image">
+                <img src="./img/devanture_coffee 1.png" alt="Façade du café Eleven">
+              </div>
+            </div>
+        </section>
+        <section class="nos-produits">
+            <div class="bloc produits">
+              <div class="image-slider">
+                <div class="slide-track">
+                  <img src="./img/Coffee-1.png" alt="Iced latte sur table en bois">
+                  <img src="./img/Coffee-2.png" alt="Cappuccino mousseux">
+                  <img src="./img/Coffee-1.png" alt="Iced latte sur table en bois">
+                  <img src="./img/Coffee-2.png" alt="Cappuccino mousseux">
+                </div>
+              </div>
+          
+              <div class="texte">
+                <h2>Nos produits & services</h2>
+                <h3>Un savoir-faire artisanal, de la tasse à l'assiette.</h3>
+                <p>
+                  Derrière chaque tasse, il y a une attention particulière : des cafés de spécialité sélectionnés auprès de torréfacteurs passionnés,
+                  des thés bio, et des recettes maison pensées au fil des saisons.<br><br>
+                  Nous proposons aussi une gamme de boissons fraîches, jus pressés et douceurs artisanales — à déguster sur place ou à emporter.
+                  Et pour prolonger l’expérience, nos formules petit-déjeuner et brunch sont disponibles tout au long de la semaine.
+                </p>
+                <a href="#" class="cta">Découvrir la carte</a>
+              </div>
+            </div>
+        </section>
 
-
+        <section class="benefits-section">
+            <div class="benefit-item">
+                <img src="./img/icone2/icone1.png" alt="Icône camion de livraison gratuite" class="benefit-icon"> 
+                <h3 class="benefit-title">Livraison offerte</h3>
+                <p class="benefit-description">
+                    Profitez de nos cafés et pâtisseries chez vous.
+                </p>
+            </div>
+            <div class="benefit-item">
+                <img src="./img/icone2/icone2.png" alt="Icône carte bancaire Click & Collect" class="benefit-icon">
+                <h3 class="benefit-title">Click & Collect</h3>
+                <p class="benefit-description">
+                    Commandez en ligne, récupérez sans attendre.
+                </p>
+            </div>
+            <div class="benefit-item">
+                <img src="./img/icone2/icone3.png" alt="Icône panier d'achat sécurisé" class="benefit-icon">
+                <h3 class="benefit-title">Paiement sécurisé</h3>
+                <p class="benefit-description">
+                    Vos achats en ligne sont 100 % protégés.
+                </p>
+            </div>
+        </section>
+     
     </main>
 
     <footer>
-
+        <footer class="footer">
+            <div class="footer-column logo-section">
+              <img src="./img/Logo-Eleven coffee-blanc 1.png" alt="Logo footer eleven" />
+              <p>24 Rue Centrale 74000 Annecy</p>
+              <p>04 50 00 00 00</p>
+              <p>contact@elevencafe.fr</p>
+            </div>
+      
+            <div class="separator" aria-hidden="true"></div>
+      
+            <div class="footer-column">
+              <p><strong>Accueil</strong></p>
+              <p>Notre histoire</p>
+              <p>La carte</p>
+              <p>Nos services</p>
+            </div>
+      
+            <div class="separator" aria-hidden="true"></div>
+      
+            <div class="footer-column">
+              <p><strong>Suivez nous</strong></p>
+              <p>icone insta</p>
+              <p>icon facebook</p>
+              <p>icon tiktok</p>
+            </div>
+      
+            <div class="separator" aria-hidden="true"></div>
+      
+            <div class="footer-column">
+              <button class="btn">Contacter nous</button>
+              <button class="btn secondary">Voir la carte</button>
+            </div>
     </footer>
 
 </body>
