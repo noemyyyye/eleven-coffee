@@ -334,14 +334,16 @@ a:hover {
   main .notre-histoire {
     flex-direction: column;
   }
-  main .history-content, main .history-img {
+  main .history-content,
+  main .history-img {
     width: 100%;
   }
   main .pourquoi-nous {
     flex-direction: column;
     padding: 50px 24px;
   }
-  main .pourquoi-nous .text-why-us, main .pourquoi-nous .img-why-us {
+  main .pourquoi-nous .text-why-us,
+  main .pourquoi-nous .img-why-us {
     width: 100%;
   }
   main .contact-section {
@@ -645,9 +647,66 @@ a:hover {
     height: 260px;
   }
 }
-@media (max-width: 480px) {
-  body {
-    padding: 0;
-    margin: 0;
+@media (max-width: 768px) {
+  header .menu {
+    padding: 0px;
+  }
+  header .text-banner {
+    padding-top: 150px;
+  }
+  .blockPresentation {
+    display: flex;
+    flex-direction: column;
+  }
+  .blockAEmporter {
+    display: flex;
+    flex-direction: column;
+  }
+  .blockAEmporter div {
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+  }
+  .blockAEmporter img {
+    width: 100%;
+  }
+  .blockLivraison {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .blockLivraison div {
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+  }
+  .blockLivraison img {
+    width: 100%;
+  }
+  .blockEspaceCoworking {
+    display: flex;
+    flex-direction: column;
+  }
+  .blockEspaceCoworking .carrousel {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    padding: 0px;
+  }
+  .blockEspaceCoworking .carrousel .un {
+    margin: 0px;
+  }
+  .blockEspaceCoworking .carrousel .deux {
+    padding: 10px 0px;
+  }
+  .blockEspaceCoworking .carrousel .trois {
+    margin: 0px;
+  }
+  .blockCarteFidelite {
+    height: 100%;
+  }
+  .blockCarteFidelite div {
+    padding: 100px;
   }
 }/*# sourceMappingURL=service.css.map */

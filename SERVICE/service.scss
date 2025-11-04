@@ -89,8 +89,8 @@ $pad-large: 40px;
   text-align: center;
   padding: 50px;
   h2 {
-   font-family: $titre;
-   font-size: 50px;
+    font-family: $titre;
+    font-size: 50px;
   }
   p {
     margin-top: 20px;
@@ -251,8 +251,8 @@ a {
 
   div {
     @include blocText();
-  } 
-  
+  }
+
   img {
     @include imgservice();
   }
@@ -272,12 +272,12 @@ a {
   }
 }
 
-// Block espace coworking 
+// Block espace coworking
 
 .blockEspaceCoworking {
   background-color: $creme;
   padding: 50px;
-  
+
   .text {
     display: flex;
     flex-direction: column;
@@ -301,9 +301,8 @@ a {
       border-radius: 15px;
       margin-left: 20px;
     }
-  } 
+  }
 }
-
 
 // Block carte fidelite
 
@@ -312,18 +311,16 @@ a {
   background-size: cover;
   height: 580px;
 
-  div { 
+  div {
     @include textecenter();
     color: $creme;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 200px;
-  } 
+  }
 }
 
-
- 
 //Footer
 
 .footer {
@@ -334,7 +331,9 @@ a {
   flex-wrap: wrap;
   font-family: $titre;
 
-  img { height: 80px; }
+  img {
+    height: 80px;
+  }
 
   .footer-column {
     display: flex;
@@ -345,7 +344,7 @@ a {
 
   .separator {
     width: 1px;
-    background-color: rgba($blanc, .3);
+    background-color: rgba($blanc, 0.3);
     height: 150px;
   }
 
@@ -359,30 +358,52 @@ a {
       color: $beige;
     }
 
-    &:hover { opacity: .85; }
+    &:hover {
+      opacity: 0.85;
+    }
   }
 }
 
-
 @media (max-width: 900px) {
-  header .text-banner { width: 80%; padding-left: 40px; padding-top: 120px; }
-  main .notre-histoire { flex-direction: column; }
-  main .history-content, main .history-img { width: 100%; }
-  main .pourquoi-nous { flex-direction: column; padding: 50px 24px; }
-  main .pourquoi-nous .text-why-us, main .pourquoi-nous .img-why-us { width: 100%; }
-  main .contact-section { flex-direction: column; gap: 30px; }
-  .footer { justify-content: center; }
+  header .text-banner {
+    width: 80%;
+    padding-left: 40px;
+    padding-top: 120px;
+  }
+  main .notre-histoire {
+    flex-direction: column;
+  }
+  main .history-content,
+  main .history-img {
+    width: 100%;
+  }
+  main .pourquoi-nous {
+    flex-direction: column;
+    padding: 50px 24px;
+  }
+  main .pourquoi-nous .text-why-us,
+  main .pourquoi-nous .img-why-us {
+    width: 100%;
+  }
+  main .contact-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footer {
+    justify-content: center;
+  }
 }
 
- 
-$bp-desktop: 1200px;  
-$bp-laptop:  992px;  
-$bp-tablet:  768px; 
-$bp-mobile:  560px;
-$bp-small:   380px; 
+$bp-desktop: 1200px;
+$bp-laptop: 992px;
+$bp-tablet: 768px;
+$bp-mobile: 560px;
+$bp-small: 380px;
 
 @mixin down($bp) {
-  @media (max-width: $bp) { @content; }
+  @media (max-width: $bp) {
+    @content;
+  }
 }
 
 @include down($bp-desktop) {
@@ -397,59 +418,107 @@ $bp-small:   380px;
     height: 360px;
   }
 
-  .promo-section { padding: 50px 30px; }
-  .pourquoi-nous { padding: 70px 60px; }
+  .promo-section {
+    padding: 50px 30px;
+  }
+  .pourquoi-nous {
+    padding: 70px 60px;
+  }
 }
 
 @include down($bp-laptop) {
-  header .menu .navigation ul { gap: 40px; }
+  header .menu .navigation ul {
+    gap: 40px;
+  }
   header .text-banner {
     width: 65%;
     padding-left: 50px;
     padding-top: 110px;
   }
-  header .banner h1 { font-size: 42px; }
-  header .banner p  { font-size: 17px; }
+  header .banner h1 {
+    font-size: 42px;
+  }
+  header .banner p {
+    font-size: 17px;
+  }
 
-  .best-section { padding: 40px 0; }
-  .slider .slide-item img { width: 200px; height: 330px; }
+  .best-section {
+    padding: 40px 0;
+  }
+  .slider .slide-item img {
+    width: 200px;
+    height: 330px;
+  }
 
-  main .notre-histoire { gap: 0; }
-  main .history-content { padding: 40px; }
-  main .pourquoi-nous   { gap: 40px; padding: 60px 40px; }
+  main .notre-histoire {
+    gap: 0;
+  }
+  main .history-content {
+    padding: 40px;
+  }
+  main .pourquoi-nous {
+    gap: 40px;
+    padding: 60px 40px;
+  }
 
-  .promo-section { gap: 20px; }
+  .promo-section {
+    gap: 20px;
+  }
   .promo-section .promo-col {
     height: 320px;
   }
 
-  .contact-section { gap: 40px; padding: 50px 30px; }
+  .contact-section {
+    gap: 40px;
+    padding: 50px 30px;
+  }
 
-  .footer { gap: 16px; padding: 32px 16px; }
-  .footer .separator { height: 120px; }
+  .footer {
+    gap: 16px;
+    padding: 32px 16px;
+  }
+  .footer .separator {
+    height: 120px;
+  }
 }
 
 @include down($bp-tablet) {
   header .menu {
     padding: 0 16px;
   }
-  header .menu .logo img { width: 130px; }
+  header .menu .logo img {
+    width: 130px;
+  }
   header .menu .navigation ul {
     gap: 22px;
   }
-  header .menu .navigation a.basic { font-size: 15px; }
-  header .menu .navigation a.contact { font-size: 14px; padding: 10px 16px; }
+  header .menu .navigation a.basic {
+    font-size: 15px;
+  }
+  header .menu .navigation a.contact {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
 
-  header .banner { height: 520px; }
+  header .banner {
+    height: 520px;
+  }
   header .text-banner {
     width: 85%;
     padding-left: 24px;
     padding-top: 90px;
     gap: 16px;
   }
-  header .banner h1 { font-size: 36px; }
-  header .banner p  { font-size: 16px; }
-  header .text-banner .Discovery { font-size: 16px; padding: 12px 18px; }
+  header .banner h1 {
+    font-size: 36px;
+  }
+  header .banner p {
+    font-size: 16px;
+  }
+  header .text-banner .Discovery {
+    font-size: 16px;
+    padding: 12px 18px;
+  }
 
   main .notre-histoire {
     flex-direction: column;
@@ -458,12 +527,23 @@ $bp-small:   380px;
   main .history-img {
     width: 100%;
   }
-  main .history-img img { height: 360px; }
+  main .history-img img {
+    height: 360px;
+  }
 
-  .best-title { font-size: 32px; }
-  .slider { padding-top: 20px; }
-  .slider .slide-item img { width: 190px; height: 310px; }
-  .slider .slider-track { animation-duration: 24s; } 
+  .best-title {
+    font-size: 32px;
+  }
+  .slider {
+    padding-top: 20px;
+  }
+  .slider .slide-item img {
+    width: 190px;
+    height: 310px;
+  }
+  .slider .slider-track {
+    animation-duration: 24s;
+  }
 
   main .pourquoi-nous {
     flex-direction: column;
@@ -471,9 +551,15 @@ $bp-small:   380px;
     gap: 26px;
   }
   main .pourquoi-nous .text-why-us,
-  main .pourquoi-nous .img-why-us { width: 100%; }
-  main .pourquoi-nous .text-why-us h3 { font-size: 28px; }
-  main .pourquoi-nous .text-why-us p  { font-size: 15px; }
+  main .pourquoi-nous .img-why-us {
+    width: 100%;
+  }
+  main .pourquoi-nous .text-why-us h3 {
+    font-size: 28px;
+  }
+  main .pourquoi-nous .text-why-us p {
+    font-size: 15px;
+  }
 
   .promo-section {
     flex-direction: column;
@@ -492,8 +578,12 @@ $bp-small:   380px;
     padding: 40px 24px;
     gap: 24px;
   }
-  .contact-map { height: 260px; }
-  .contact-map iframe { height: 100%; }
+  .contact-map {
+    height: 260px;
+  }
+  .contact-map iframe {
+    height: 100%;
+  }
   .contact-infos .contact-btn {
     width: 100%;
     max-width: 380px;
@@ -503,74 +593,209 @@ $bp-small:   380px;
     justify-content: center;
     gap: 24px;
   }
-  .footer .separator { display: none; }
-  .footer .footer-column { min-width: 45%; align-items: center; text-align: center; }
-  .footer .btn { width: 100%; max-width: 260px; }
+  .footer .separator {
+    display: none;
+  }
+  .footer .footer-column {
+    min-width: 45%;
+    align-items: center;
+    text-align: center;
+  }
+  .footer .btn {
+    width: 100%;
+    max-width: 260px;
+  }
 }
 
 @include down($bp-mobile) {
-header .menu .navigation ul { gap: 14px; }
-header .menu .navigation a.basic { font-size: 14px; }
-header .menu .navigation a.contact { font-size: 13px; padding: 10px 14px; }
-header .menu .logo img { width: 110px; }
+  header .menu .navigation ul {
+    gap: 14px;
+  }
+  header .menu .navigation a.basic {
+    font-size: 14px;
+  }
+  header .menu .navigation a.contact {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+  header .menu .logo img {
+    width: 110px;
+  }
 
-header .banner { height: 480px; }
-header .text-banner {
- width: 92%;
- padding-left: 16px;
- padding-top: 80px;
-}
-header .banner h1 { font-size: 30px; }
-header .banner p  { font-size: 15px; }
-header .text-banner .Discovery { font-size: 15px; padding: 10px 16px; }
+  header .banner {
+    height: 480px;
+  }
+  header .text-banner {
+    width: 92%;
+    padding-left: 16px;
+    padding-top: 80px;
+  }
+  header .banner h1 {
+    font-size: 30px;
+  }
+  header .banner p {
+    font-size: 15px;
+  }
+  header .text-banner .Discovery {
+    font-size: 15px;
+    padding: 10px 16px;
+  }
 
-main .history-content { padding: 28px 18px; }
-main .history-content h2 { font-size: 26px; }
-main .history-content p  { font-size: 15px; }
-main .history-content a  { font-size: 15px; padding: 12px 18px; }
-main .history-img img    { height: 300px; }
+  main .history-content {
+    padding: 28px 18px;
+  }
+  main .history-content h2 {
+    font-size: 26px;
+  }
+  main .history-content p {
+    font-size: 15px;
+  }
+  main .history-content a {
+    font-size: 15px;
+    padding: 12px 18px;
+  }
+  main .history-img img {
+    height: 300px;
+  }
 
-.best-title { font-size: 26px; }
-.slider .slide-item img { width: 170px; height: 280px; }
-.slider .slider-track  { gap: 28px; animation-duration: 26s; }
+  .best-title {
+    font-size: 26px;
+  }
+  .slider .slide-item img {
+    width: 170px;
+    height: 280px;
+  }
+  .slider .slider-track {
+    gap: 28px;
+    animation-duration: 26s;
+  }
 
-main .pourquoi-nous .text-why-us h3 { font-size: 24px; }
-main .pourquoi-nous .text-why-us p  { font-size: 14.5px; }
+  main .pourquoi-nous .text-why-us h3 {
+    font-size: 24px;
+  }
+  main .pourquoi-nous .text-why-us p {
+    font-size: 14.5px;
+  }
 
-.promo-section .promo-col { height: 250px; }
-.promo-section .promo-col h3 { font-size: 22px; }
-.promo-section .promo-col p  { font-size: 16px; }
+  .promo-section .promo-col {
+    height: 250px;
+  }
+  .promo-section .promo-col h3 {
+    font-size: 22px;
+  }
+  .promo-section .promo-col p {
+    font-size: 16px;
+  }
 
-.contact-infos .info-box { padding: 14px 16px; }
-.contact-infos .contact-btn { font-size: 18px; }
+  .contact-infos .info-box {
+    padding: 14px 16px;
+  }
+  .contact-infos .contact-btn {
+    font-size: 18px;
+  }
 
-.footer { padding: 28px 16px; }
-.footer img { height: 64px; }
-.footer .footer-column { min-width: 100%; }
-.footer .btn { max-width: none; width: 100%; }
+  .footer {
+    padding: 28px 16px;
+  }
+  .footer img {
+    height: 64px;
+  }
+  .footer .footer-column {
+    min-width: 100%;
+  }
+  .footer .btn {
+    max-width: none;
+    width: 100%;
+  }
 }
 
 @include down($bp-small) {
-header .banner { height: 440px; }
-header .banner h1 { font-size: 26px; }
-.slider .slide-item img { width: 150px; height: 240px; }
-main .history-img img { height: 260px; }
+  header .banner {
+    height: 440px;
+  }
+  header .banner h1 {
+    font-size: 26px;
+  }
+  .slider .slide-item img {
+    width: 150px;
+    height: 240px;
+  }
+  main .history-img img {
+    height: 260px;
+  }
 }
 
-
-
-
-@media (max-width: 480px) {
-  body {
-    padding: 0;
-    margin: 0;
+@media (max-width: 768px) {
+  header {
+    .menu {
+      padding: 0px;
+    }
+    .text-banner {
+      padding-top: 150px;
+    }
   }
+  
   .blockPresentation {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blockAEmporter{
+    display: flex;
+    flex-direction: column;
+
+    div {
+      margin-top: 20px;
+      width: 100%;
+      padding: 20px 0px;
+      text-align: center;
+    }
+    img {
+      width: 100%;
+    }
 
   }
 
-  .blockLivraison{
-  
+  .blockLivraison {
+    display: flex;
+    flex-direction: column-reverse;
+
+    div {
+      margin-top: 20px;
+      width: 100%;
+      padding: 20px 0px;
+      text-align: center;
+    }
+    img {
+      width: 100%;
+    }
   }
-  
+
+  .blockEspaceCoworking{
+    display: flex;
+    flex-direction: column;
+
+    .carrousel {
+      display: flex;
+      flex-direction: column;
+      height: 50%;
+      padding: 0px;
+      .un {
+        margin: 0px;
+      }
+      .deux {
+        padding: 10px 0px;
+      }
+      .trois {
+        margin: 0px;
+      }
+    }  
+  }
+
+  .blockCarteFidelite{
+    height: 100%;
+    div {
+      padding: 100px;
+    }
+  }
 }
